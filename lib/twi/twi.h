@@ -4,7 +4,7 @@
 #include <stdint.h>
 
 void twi_init_master();
-void twi_init_slave(uint8_t address);
+void twi_init_slave(unsigned char address);
 void twi_start();
 void twi_stop();
 void twi_write(unsigned char data);

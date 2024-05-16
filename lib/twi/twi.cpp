@@ -26,7 +26,7 @@ void twi_stop(void) {
     while(TWCR & (1<<TWSTO));
 }
 
-void twi_write(uint8_t data)
+void twi_write(unsigned char data)
 {
     // Load data into TWI data register
     TWDR = data;
@@ -38,7 +38,7 @@ void twi_write(uint8_t data)
     while (!(TWCR & (1 << TWINT)));
 }
 
-void twi_init_slave(uint8_t address)
+void twi_init_slave(unsigned char address)
 {
     // Set slave address
     TWAR = (address << 1);
